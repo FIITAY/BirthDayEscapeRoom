@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="costume.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">!טעות בפיענוח</h1>
+        <h4 class= "mx-auto w-75 text-right"> <span class="blink">:</span> פענח את הצופן</h3>
+        <h3 class="text-center">αλωτο</h2>
+        <form onsubmit="return checkAnswer()">
+            <div class="form-group mx-auto w-75">
+                <label for="PasswordLabel" class="w-100 text-right">הצופן המפוענח</label>
+                <input type="text" class="form-control text-center" id="decoded" placeholder="*****">
+            </div>
+            <button type="submit" class="btn btn-danger btn-lg btn-block w-75 mx-auto" value="SUBMIT">שלח</button>
+        </form>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const rightAnswer = 'חיסון';
+            var answer = document.getElementById('decoded').value;
+            if(answer == rightAnswer) {
+                location="http://localhost:8001/";
+            } else {
+                location="SecondPage-Wrong.html"
+            }
+            return false;
+        }
+    </script>
+
+</body>
+</html>
